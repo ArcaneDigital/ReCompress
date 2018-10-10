@@ -5,6 +5,8 @@ Image resizing, multi-format generation, and compression tool. It will process `
 - `gif`, `svg`, `webp` : by default compress and output to the output path specificed
 - `png`, `jpeg|jpg` : by defaults creates 7 different sized images, compresses them, and also creates a `webp` version of the resized image
 
+It will generate a `.json` manifest file for each image that multiple formats are created for which includes the sizes generated as well.
+
 ## API
 `recompress({
     input,
