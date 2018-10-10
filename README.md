@@ -5,7 +5,7 @@ Image resizing, multi-format generation, and compression tool. It will process `
 - `gif`, `svg`, `webp` : by default compress and output to the output path specificed
 - `png`, `jpeg|jpg` : by defaults creates 7 different sized images, compresses them, and also creates a `webp` version of the resized image
 
-It will generate a `.json` manifest file for each image that multiple formats are created for which includes the sizes generated as well.
+It will generate a `.json` manifest file for each image that multiple formats are created for which includes the sizes generated as well. This file will output alongside the images in the output folder.
 
 ## API
 `recompress({
@@ -52,7 +52,10 @@ npm install recompress --save
 const recompress = require('recompress');
 
 (async () => {
-    await recompress();
+    await recompress({
+        input: ['src/images', '!src/images/exclude'],
+        output: 'dist/images'
+    });
     console.log('done');
 })();
 ```
@@ -62,7 +65,10 @@ const recompress = require('recompress');
 ```javascript
 const recompress = require('recompress');
 
-recompress()
+recompress({
+   input: ['src/images', '!src/images/exclude'],
+   output: 'dist/images'
+})
     .then(() => {
         console.log('done');
     });
