@@ -1,0 +1,14 @@
+{
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "indent": ["error", 4],
+        "max-len": ["error", { "code": 80 }],
+        "prettier/prettier": ["error"]
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "amd": true
+    }
+}
