@@ -165,7 +165,7 @@ module.exports = async ({
 } = {}) => {
     if (!input) throw new Error('Input path is a required field');
     if (!output) throw new Error('Output path is a required field');
-    if (typeof output !== 'string' || !(output instanceof String))
+    if (typeof output !== 'string' || !output instanceof String)
         throw new Error('Output must be a string.');
 
     const inputs = await globby(Array.isArray(input) ? input : [input], {
@@ -186,7 +186,7 @@ module.exports = async ({
         configure({
             input: path,
             inputPathSegments,
-            output,
+            outputBase: output,
             sizes: outputSizes,
             compressOnlyPaths,
         }),
