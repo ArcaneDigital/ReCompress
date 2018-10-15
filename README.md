@@ -1,5 +1,7 @@
 # ReCompress
 
+[![npm version](https://badge.fury.io/js/recompress.svg)](https://badge.fury.io/js/recompress) ![dependancies](https://david-dm.org/ArcaneDigital/ReCompress.svg) 
+
 Image resizing, multi-format generation, and compression tool. It will process `gif`, `svg`, `png`, `jpeg|jpg`, `webp` image types with the following default configuration...
 
 - `gif`, `svg`, `webp` : by default compress and output to the output path specificed
