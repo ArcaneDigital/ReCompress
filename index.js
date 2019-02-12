@@ -125,9 +125,10 @@ const fileHandler = async ({
         );
     }
 
+    const fileExtension = fileInfo.ext;
     const manifest = {
         ratio: (metadata.height / metadata.width) * 100,
-        formats: [metadata.format, ...additionalFormats],
+        formats: [fileExtension.replace('.', ''), ...additionalFormats],
         sizes: [],
     };
     await Promise.map(
